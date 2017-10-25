@@ -1,4 +1,4 @@
-<div class="idea media">
+<div class="idea media mt-3">
   <%= link_to idea do %>
     <%= image_tag idea.picture, alt: idea.name, class: 'mr-3 img-thumbnail' %>
   <% end %>
@@ -7,13 +7,13 @@
     <p><%= idea.description %></p>
     <div class="btn-toolbar">
       <div class="btn-group mr-2">
-        <%= link_to 'Show', idea, class: 'btn btn-light' %>
+        <%= link_to 'Show', idea, class: 'btn btn-outline-primary' %>
       </div>
       <div class="btn-group mr-2">
-        <%= link_to 'Edit', edit_idea_path(idea), class: 'btn btn-light' %>
+        <%= link_to 'Edit', edit_idea_path(idea), class: 'btn btn-outline-secondary' %>
       </div>
       <div class="btn-group mr-2">
-        <%= link_to 'Destroy', idea, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Destroy', idea, method: :delete, class: 'btn btn-outline-danger', data: { confirm: 'Are you sure?' } %>
       </div>
     </div>
   </div>

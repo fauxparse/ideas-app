@@ -1,19 +1,17 @@
-<p id="notice"><%= notice %></p>
+<% if notice.present? %>
+  <p id="notice" class="alert alert-primary"><%= notice %></p>
+<% end %>
+
+<h1><%= @idea.name %></h1>
 
 <p>
-  <strong>Name:</strong>
-  <%= @idea.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
   <%= @idea.description %>
 </p>
 
 <p>
-  <strong>Picture:</strong>
-  <%= image_tag(@idea.picture_url, width: 600) if @idea.picture.present? %>
+  <%= image_tag(@idea.picture_url, width: 600, class: 'mw-100') if @idea.picture.present?  %>
 </p>
 
-<%= link_to 'Edit', edit_idea_path(@idea) %> |
-<%= link_to 'Back', ideas_path %>
+<%= link_to 'Back', ideas_path, class: 'btn btn-light float-left' %>
+<%= link_to 'Edit', edit_idea_path(@idea), class: 'btn btn-light float-right' %>
+

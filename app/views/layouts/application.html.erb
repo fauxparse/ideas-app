@@ -14,7 +14,7 @@
       <div class="container">
         <%= link_to 'Ideas', root_path, class: 'navbar-brand' %>
 
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav float-right">
           <li class="nav-item">
             <%= link_to 'New idea', new_idea_path, class: 'nav-link' %>
           </li>
@@ -22,7 +22,7 @@
       </div>
     </nav>
 
-    <main class="container">
+    <main class="container mt-5 mb-5" style="max-width: 520px; margin-left: auto; margin-right: auto;">
       <%= yield %>
     </main>
   </body>
