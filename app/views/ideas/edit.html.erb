@@ -2,5 +2,7 @@
 
 <%= render 'form', idea: @idea %>
 
-<%= link_to 'Show', @idea %> |
-<%= link_to 'Back', ideas_path %>
+<div class="pt-3">
+  <%= link_to 'Show', @idea, class: 'btn btn-light' %>
+  <%= link_to 'Back', ideas_path, class: 'btn btn-light' %>
+</div>
